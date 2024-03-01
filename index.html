@@ -7,29 +7,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Мой сайт</title>
 
 </head>
 
 <body>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!"><i class="material-icons">home</i>Главная</a></li>
+        <li><a href="#!"><i class="material-icons">info_outline</i>Об авторе</a></li>
+        <li><a href="#!"><i class="material-icons">collections</i>Работы</a></li>
+        <li><a href="#!"><i class="material-icons">sync</i>Процесс</a></li>
+        <li><a href="#!"><i class="material-icons">phone</i>Контакты</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="#!" class="sidenav-close"><i class="material-icons">close</i>Закрыть</a></li>
+    </ul>
     <header class="header">
         <div class="container">
-            <div class="header__title">
-                <img class="logo" src="img/logo.png" alt="logo">
-                <ul class="header__menu">
-                    <li class="menu_item"><a href="#">Главная</a></li>
-                    <li class="menu_item"><a href="#">Об авторе</a></li>
-                    <li class="menu_item"><a href="#">Работы</a></li>
-                    <li class="menu_item"><a href="#">Процесс</a></li>
-                    <li class="menu_item"><a href="#">Контакты</a></li>
-                </ul>
+            <div class="header__nav">
+                <div class="header__nav-left"><img class="logo" src="img/logo.png" alt="logo"></div>
+                <div class="header__nav-right">
+                    <a class="burger sidenav-trigger" data-target="slide-out">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                    </a>
+                    <ul class="header__menu">
+                        <li class="menu_item"><a href="#">Главная</a></li>
+                        <li class="menu_item"><a href="#">Об авторе</a></li>
+                        <li class="menu_item"><a href="#">Работы</a></li>
+                        <li class="menu_item"><a href="#">Процесс</a></li>
+                        <li class="menu_item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="header__info">
                 <img class="header__img" src="img/screen.png" alt="Screen">
                 <div class="header__text">
-                    <h1 class="h1">Дизайн и верстка</h1>
-                    <p class="p header__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                    <h1 class="h1-title header__h1">Дизайн и верстка</h1>
+                    <p class="p-text header__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне.
                         Lorem
                         Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
                     <button class="header__btn">Написать мне</button>
@@ -39,8 +59,9 @@
     </header>
     <section class="about-me">
         <div class="container">
-            <h2 class="h2 about-me__h2">Обо мне</h2>
-            <p class="p about-me__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
+            <h2 class="h2-title about-me__h2">Обо мне</h2>
+            <p class="p-text about-me__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                Lorem
                 Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
         </div>
     </section>
@@ -72,18 +93,18 @@
         <div class="container">
             <div class="skills__flex">
                 <div class="skills__flex-left">
-                    <h2 class="h2 skills__h2">Мои навыки</h2>
-                    <p class="p skills__p">Adobe Photoshop</p>
+                    <h2 class="h2-title skills__h2">Мои навыки</h2>
+                    <p class="p-text skills__p">Adobe Photoshop</p>
                     <div class="progress-bar">
                         <div class="progress-bar-completed" style="width: 60%"></div>
                         <div class="progress-bar-remaining" style="width: 40%"></div>
                     </div>
-                    <p class="p skills__p">Adobe Photoshop</p>
+                    <p class="p-text skills__p">Adobe Photoshop</p>
                     <div class="progress-bar">
                         <div class="progress-bar-completed" style="width: 85%"></div>
                         <div class="progress-bar-remaining" style="width: 15%"></div>
                     </div>
-                    <p class="p skills__p">Adobe Photoshop</p>
+                    <p class="p-text skills__p">Adobe Photoshop</p>
                     <div class="progress-bar">
                         <div class="progress-bar-completed" style="width: 70%"></div>
                         <div class="progress-bar-remaining" style="width: 30%"></div>
@@ -97,10 +118,11 @@
     </section>
     <section class="video">
         <div class="container">
-            <h2 class="h2 video__h2">Как я работаю</h2>
-            <p class="p video__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
+            <h2 class="h2-title video__h2">Как я работаю</h2>
+            <p class="p-text video__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
+                Ipsum
                 является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-            <video width="1100" height="600" controls poster="img/video.jpg">
+            <video max-width="1100" max-height="600" controls poster="img/video.jpg">
                 <source src="" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                 Тег video не поддерживается вашим браузером.
                 <a href="">Скачайте видео</a>.
@@ -156,8 +178,9 @@
     <section class="form">
         <div class="container">
             <div class="form__info">
-                <h2 class="h2 form__h2">Хотите веб-сайт?</h2>
-                <p class="p form__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
+                <h2 class="h2-title form__h2">Хотите веб-сайт?</h2>
+                <p class="p-text form__p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                    Lorem
                     Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
             </div>
             <form>
@@ -189,6 +212,8 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
