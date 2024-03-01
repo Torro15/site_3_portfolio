@@ -611,6 +611,10 @@ video {
         font-size: 36px;
     }
 
+    .h2-title {
+        font-size: 30px;
+    }
+
     .header__p {
         font-size: 15px;
         padding-left: 0;
